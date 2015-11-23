@@ -216,22 +216,18 @@ public class Calculator extends JFrame implements ActionListener {
             }
             case "-":
             {
-                result = temporary[0] - temporary[1];
                 break;
             }
             case "*":
             {
-                result = temporary[0] * temporary[1];
                 break;
             }
             case "/":
             {
-                result = temporary[0] / temporary[1];
                 break;
             }
             case "x^y":
             {
-                result = Math.pow(temporary[0], temporary[1]);
                 break;
             }
             default:
