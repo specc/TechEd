@@ -90,7 +90,7 @@ public class Calculator extends JFrame implements ActionListener {
     }
     
     public void getAdd() {
-        // Add button
+        // Add button: Note this handles 2 parameters. Check getResult for handling the calculation.
         try {
             temporary[0] = Double.parseDouble(display.getText());
             lastOperatorSelected = "+";
