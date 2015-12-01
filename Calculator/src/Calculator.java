@@ -112,8 +112,9 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 1: Subtract: Set the first input and the operator selected. 
         // Calculate and display result in getResult().
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch(NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
@@ -121,8 +122,9 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 2: Multiply: Set the first input and the operator selected. 
         // Calculate and display result in getResult().
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch(NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
@@ -130,32 +132,36 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 3: Divide: Set the first input and the operator selected. 
         // Calculate and display result in getResult().
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch(NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
     public void getSqrt() {
         // TODO: Group 4: Square Root: Calculate and display the square root after user hits √.
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch(NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
     public void getSquare() {
         // TODO: Group 5: Square: Calculate and display the square after user hits x^2.
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch (NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
     public void getCube() {
         // TODO: Group 6: Cube: Calculate and display the cube after user hits x^3.
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch (NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
@@ -163,8 +169,9 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 7: Power: Set the first input and the operator selected. 
         // Calculate and display result in getResult().
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch (NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
@@ -172,8 +179,9 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 8: Factorial: Calculate and display the factorial after user hits !. 
         // Fact(0) = 1. Display "Invalid Input" if input is not an integer.
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch (NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
@@ -183,14 +191,16 @@ public class Calculator extends JFrame implements ActionListener {
             double currentResult = Double.parseDouble(display.getText());
             display.setText(String.valueOf(1.0 / currentResult));
         } catch (NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
     public void getPosNeg() {
         // TODO: Group 10: Negative Sign: Add/Remove the negative sign after user hits +/-.
         try {
-            throw new NumberFormatException();
+            throw new Exception();
         } catch(NumberFormatException e) {
+        } catch(Exception e) {
         }
     }
     
