@@ -1,3 +1,6 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -158,9 +161,13 @@ public class Calculator extends JFrame implements ActionListener {
     public void getCube() {
         // TODO: Group 6: Cube: Calculate and display the cube after user hits x^3.
         try {
-            throw new Exception();
+        	double d = Double.parseDouble(display.getText());
+        	display.setText("" + (d * d * d));
         } catch (NumberFormatException e) {
+        	display.setText("wrong input");
         } catch(Exception e) {
+	
+        	display.setText("wrong input");
         }
     }
     
