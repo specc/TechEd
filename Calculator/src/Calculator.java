@@ -158,13 +158,32 @@ public class Calculator extends JFrame implements ActionListener {
         } catch (NumberFormatException e) {
         }
     }
+
+    private int factorial(long i)
+    {
+        if (i==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return i*factorial(i - 1);
+        }
+    }
     
     public void getFactorial() {
-        // TODO: Group 8: Factorial: Calculate and display the factorial after user hits !. 
-        // Fact(0) = 1. Display "Invalid Input" if input is not an integer.
+        // Add button: Note this handles 2 parameters. Check getResult for handling the calculation.
         try {
-            throw new NumberFormatException();
-        } catch (NumberFormatException e) {
+            long input = Long.parseLong(display.getText());
+            if (input < 0)
+            {
+                display.setText("Invalid Input");
+                return;
+            }
+            display.setText(factorial(input));
+
+        } catch(NumberFormatException e) {
+            display.setText("Invalid Input");
         }
     }
     
