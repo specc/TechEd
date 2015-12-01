@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.UIManager;
 
 public class Calculator extends JFrame implements ActionListener {
     
@@ -171,21 +184,42 @@ public class Calculator extends JFrame implements ActionListener {
         } catch(Exception e) {
         }
     }
+
+    private int factorial(long i)
+    {
+        if (i==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return i*factorial(i - 1);
+        }
+    }
     
     public void getFactorial() {
-        // TODO: Group 8: Factorial: Calculate and display the factorial after user hits !. 
-        // Fact(0) = 1. Display "Invalid Input" if input is not an integer.
         try {
-            throw new Exception();
-        } catch (NumberFormatException e) {
-        } catch(Exception e) {
+            long input = Long.parseLong(display.getText());
+            if (input < 0)
+            {
+                display.setText("Invalid Input");
+                return;
+            }
+            display.setText(factorial(input));
+
+        } catch(NumberFormatException e) {
+            display.setText("Invalid Input");
+        }
+ 		catch(Exception e) {
+			display.setText("Some other exception");
         }
     }
     
     public void getReciprocal() {
         // TODO: Group 9: Reciprocal: Calculate and display the reciprocal after user hits 1/x.
         try {
-            throw new Exception();
+            double currentResult = Double.parseDouble(display.getText());
+            display.setText(String.valueOf(1.0 / currentResult));
         } catch (NumberFormatException e) {
         } catch(Exception e) {
         }
