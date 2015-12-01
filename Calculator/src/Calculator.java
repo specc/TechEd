@@ -1,3 +1,5 @@
+
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -145,8 +147,10 @@ public class Calculator extends JFrame implements ActionListener {
     public void getCube() {
         // TODO: Group 6: Cube: Calculate and display the cube after user hits x^3.
         try {
-            throw new NumberFormatException();
+        	double d = Double.parseDouble(display.getText());
+        	display.setText("" + (d * d * d));
         } catch (NumberFormatException e) {
+        	display.setText("wrong input");
         }
     }
     
