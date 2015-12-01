@@ -181,8 +181,7 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 9: Reciprocal: Calculate and display the reciprocal after user hits 1/x.
         try {
             double currentResult = Double.parseDouble(display.getText());
-            currentResult = 1/currentResult;
-            display.setText(String.valueOf(currentResult));
+            display.setText(String.valueOf(1.0 / currentResult));
         } catch (NumberFormatException e) {
         }
     }
