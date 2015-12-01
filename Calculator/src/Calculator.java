@@ -121,8 +121,10 @@ public class Calculator extends JFrame implements ActionListener {
         // TODO: Group 3: Divide: Set the first input and the operator selected. 
         // Calculate and display result in getResult().
         try {
-            throw new NumberFormatException();
+            temporary[0] = Double.parseDouble(display.getText());
+            lastOperatorSelected = "/";
         } catch(NumberFormatException e) {
+            display.setText("Invalid Input");
         }
     }
     
@@ -224,6 +226,7 @@ public class Calculator extends JFrame implements ActionListener {
             }
             case "/":
             {
+                result = temporary[0] / temporary[1];
                 break;
             }
             case "x^y":
