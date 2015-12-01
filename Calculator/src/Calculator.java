@@ -137,7 +137,9 @@ public class Calculator extends JFrame implements ActionListener {
     public void getSquare() {
         // TODO: Group 5: Square: Calculate and display the square after user hits x^2.
         try {
-            throw new NumberFormatException();
+        	double result = Double.parseDouble(display.getText());
+        	result *= result;
+        	display.setText(Double.toString(result));
         } catch (NumberFormatException e) {
         }
     }
